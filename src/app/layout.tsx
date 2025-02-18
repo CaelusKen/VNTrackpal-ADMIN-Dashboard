@@ -7,6 +7,8 @@ import {
   navSections,
   userProfile,
 } from "@/config/sidebar-config";
+import { DashboardHeader } from "@/components/reuse/header/header";
+import { headerConfig } from "@/config/header-config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,7 +41,15 @@ export default function RootLayout({
           footerActions={footerActions}
           userProfile={userProfile}
         />
-        <main className="flex-1 p-8">{children}</main>
+        <main className="flex-1">
+          <DashboardHeader
+            {...headerConfig}
+            notificationCount={3}
+            userName="John Doe"
+            userAvatar="/placeholder.svg?height=32&width=32"
+          />
+          <div className="p-8">{children}</div>
+        </main>
       </body>
     </html>
   );

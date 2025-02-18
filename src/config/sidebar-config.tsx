@@ -2,12 +2,7 @@
 
 import {
   LayoutDashboard,
-  ListTodo,
-  Trophy,
-  FolderKanban,
   PiggyBank,
-  FileText,
-  BarChart3,
   Users2,
   UserPlus,
   Lock,
@@ -15,6 +10,9 @@ import {
   HelpCircle,
   Printer,
   Settings,
+  CircleUser,
+  Database,
+  PackageOpen,
 } from "lucide-react";
 import type { NavSection, FooterAction, UserProfile } from "@/types/sidebar";
 
@@ -30,23 +28,23 @@ export const navSections: NavSection[] = [
         icon: LayoutDashboard,
       },
       {
-        title: "To-do List",
-        href: "/todo",
-        icon: ListTodo,
+        title: "User Accounts",
+        href: "/accounts",
+        icon: CircleUser,
         badge: {
           content: "05",
           variant: "secondary",
         },
       },
       {
-        title: "Goals",
-        href: "/goals",
-        icon: Trophy,
+        title: "Food Database",
+        href: "/food-data",
+        icon: Database,
       },
       {
-        title: "Projects",
-        href: "/projects",
-        icon: FolderKanban,
+        title: "Subscriptions",
+        href: "/subscriptions",
+        icon: PackageOpen,
       },
       {
         title: "Budgets",
@@ -57,16 +55,6 @@ export const navSections: NavSection[] = [
           variant: "secondary",
           className: "bg-primary text-primary-foreground",
         },
-      },
-      {
-        title: "Templates",
-        href: "/templates",
-        icon: FileText,
-      },
-      {
-        title: "Reports",
-        href: "/reports",
-        icon: BarChart3,
       },
     ],
   },
