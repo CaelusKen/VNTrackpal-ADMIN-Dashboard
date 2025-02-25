@@ -1,8 +1,8 @@
-import UserAccountsCard from './UserAccountsCard';
+import UserAccountsCard from "./components/account-card";
 
 export default function DashboardPage() {
   return (
-    <div className="p-8">
+    <div>
       <UserAccountsCard />
     </div>
   );
